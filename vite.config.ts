@@ -7,6 +7,7 @@ const root = resolve(__dirname, "src/render");
 // https://vitejs.dev/config/
 export default defineConfig({
   root,
+  base: "./",
   resolve: {
     alias: {
       "@": root,
