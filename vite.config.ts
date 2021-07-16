@@ -14,6 +14,6 @@ export default defineConfig({
   },
   plugins: [vue()],
   build: {
-    outDir: resolve(__dirname, "dist"),
+    outDir: resolve(__dirname, "dist/render"),
   },
 });
