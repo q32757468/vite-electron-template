@@ -1,6 +1,17 @@
 if (process.env.NODE_ENV === "development") {
   require("ts-node").register({
-    project: "./tsconfig.electron.json",
+    compilerOptions: {
+      target: "esnext",
+      module: "CommonJS",
+      moduleResolution: "node",
+      strict: true,
+      resolveJsonModule: true,
+      esModuleInterop: true,
+      allowJs: true,
+      // "outDir": "dist/main"
+    },
+    include: ["src/main/**/*"],
+    exclude: ["node_modules"],
   });
   require("./src/main/app.ts");
 } else {
